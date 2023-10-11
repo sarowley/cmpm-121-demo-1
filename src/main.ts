@@ -7,5 +7,14 @@ document.title = gameName;
 
 const header = document.createElement("h1");
 
-header.innerHTML = gameName;
+let counter: number = 0;
+
+header.innerHTML = "amount of otters: " + counter;
 app.append(header);
+
+const button = document.getElementById("btn");
+button?.addEventListener("mousedown", function handleClick(event) {
+  counter += 1;
+  header.innerHTML = "amount of otters: " + counter;
+  console.log(event);
+});
