@@ -18,3 +18,11 @@ button?.addEventListener("mousedown", function handleClick(event) {
   header.innerHTML = "amount of otters: " + counter;
   console.log(event);
 });
+
+window.requestAnimationFrame(incrament);
+
+function incrament() {
+  counter += 1 / 60;
+  window.requestAnimationFrame(incrament);
+  header.innerHTML = "amount of otters: " + Math.round(counter).toString();
+}
