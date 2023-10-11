@@ -19,14 +19,25 @@ button?.addEventListener("mousedown", function handleClick(event) {
   console.log(event);
 });
 
+const button1 = document.getElementById("btn1");
+button1?.addEventListener("mousedown", function handleClick(event) {
+  if (counter >= 10) {
+    counter -= 10;
+    header.innerHTML = "amount of otters: " + counter;
+    multiplier += 1;
+  }
+  console.log(event);
+});
+
 window.requestAnimationFrame(incrament);
 
 let currTime: number = 0;
 let pastTime: number = 0;
+let multiplier: number = 0;
 
 function incrament() {
   currTime = Date.now();
-  counter += 1 / (5 * (currTime - pastTime));
+  counter += multiplier / (5 * (currTime - pastTime));
   pastTime = currTime;
   window.requestAnimationFrame(incrament);
   header.innerHTML = "amount of otters: " + Math.round(counter).toString();
