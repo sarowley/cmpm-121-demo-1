@@ -21,8 +21,13 @@ button?.addEventListener("mousedown", function handleClick(event) {
 
 window.requestAnimationFrame(incrament);
 
+let currTime: number = 0;
+let pastTime: number = 0;
+
 function incrament() {
-  counter += 1 / 60;
+  currTime = Date.now();
+  counter += 1 / (5 * (currTime - pastTime));
+  pastTime = currTime;
   window.requestAnimationFrame(incrament);
   header.innerHTML = "amount of otters: " + Math.round(counter).toString();
 }
