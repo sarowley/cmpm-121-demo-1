@@ -59,7 +59,7 @@ app.append(body);
 
 const button = document.getElementById("btn");
 button?.addEventListener("mousedown", function handleClick(event) {
-  counter += 10000;
+  counter += 1;
   header.innerHTML = "amount of otters: " + counter;
   console.log(event);
 });
