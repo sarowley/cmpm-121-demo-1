@@ -20,15 +20,15 @@ let C_check: number = 1000;
 
 const Count_A: HTMLDivElement = document.querySelector("#A_counter")!;
 Count_A.append(body);
-Count_A.innerHTML = "num of A: " + A_counter;
+Count_A.innerHTML = "num of couches: " + A_counter;
 
 const Count_B: HTMLDivElement = document.querySelector("#B_counter")!;
 Count_B.append(body);
-Count_B.innerHTML = "num of B: " + B_counter;
+Count_B.innerHTML = "num of farms: " + B_counter;
 
 const Count_C: HTMLDivElement = document.querySelector("#C_counter")!;
 Count_C.append(body);
-Count_C.innerHTML = "num of C: " + C_counter;
+Count_C.innerHTML = "num of super otters: " + C_counter;
 
 header.innerHTML = "amount of otters: " + counter;
 app.append(header);
@@ -38,7 +38,7 @@ app.append(body);
 
 const button = document.getElementById("btn");
 button?.addEventListener("mousedown", function handleClick(event) {
-  counter += 1;
+  counter += 100;
   header.innerHTML = "amount of otters: " + counter;
   console.log(event);
 });
@@ -52,9 +52,9 @@ button1?.addEventListener("mousedown", function handleClick(event) {
     A_counter += 1;
     A_check *= 1.15;
     body.innerHTML = "rate: " + multiplier.toFixed(1);
-    Count_A.innerHTML = "num of A: " + A_counter;
+    Count_A.innerHTML = "num of couches: " + A_counter;
     document.querySelector("#btn1")!.innerHTML =
-      "(A upgrade (cost: " + A_check.toFixed(1) + ")";
+      "Make a Couch (cost: " + A_check.toFixed(1) + ")";
   }
   console.log(event);
 });
@@ -68,9 +68,9 @@ button2?.addEventListener("mousedown", function handleClick(event) {
     B_counter += 1;
     B_check *= 1.15;
     body.innerHTML = "rate: " + multiplier.toFixed(1);
-    Count_B.innerHTML = "num of B: " + B_counter;
+    Count_B.innerHTML = "num of farms: " + B_counter;
     document.querySelector("#btn2")!.innerHTML =
-      "(B upgrade (cost: " + B_check.toFixed(1) + ")";
+      "Start a Crab Farm (cost: " + B_check.toFixed(1) + ")";
   }
   console.log(event);
 });
@@ -84,9 +84,9 @@ button3?.addEventListener("mousedown", function handleClick(event) {
     C_counter += 1;
     C_check *= 1.15;
     body.innerHTML = "rate: " + multiplier.toFixed(1);
-    Count_C.innerHTML = "num of C: " + C_counter;
+    Count_C.innerHTML = "num of super otters: " + C_counter;
     document.querySelector("#btn3")!.innerHTML =
-      "(C upgrade (cost: " + C_check.toFixed(1) + ")";
+      "Mutate into a Super Otter (cost: " + C_check.toFixed(1) + ")";
   }
   console.log(event);
 });
